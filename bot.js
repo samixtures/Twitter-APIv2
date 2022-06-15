@@ -6,15 +6,15 @@ const config1 = require('./config1');
 const client1 = new TwitterApi(config1);
 
 const tweet = async (data) => {
-const result = await client1.v2.get('tweets/search/recent', { query: 'nodeJS', max_results: 10 });
-console.log("hello from the func!");
-console.log(result.data.length);
-// console.log(result);
-// for (let i = 0; i < result.data.length; i++) {
-//     console.log(result.data[i].text);
-//     console.log("Next");
-// }
-// console.log(result.data); // TweetV2[]
+    const result = await client1.v2.get('tweets/search/recent', { query: 'nodeJS', max_results: 10 });
+    console.log("hello from the func!");
+    console.log(result.data.length);
+    // console.log(result);
+    // for (let i = 0; i < result.data.length; i++) {
+    //     console.log(result.data[i].text);
+    //     console.log("Next");
+    // }
+    // console.log(result.data); // TweetV2[]
 }
 
 tweet();
